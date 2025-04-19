@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rolet Cinta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #d63384;
+      margin-bottom: 30px;
+      animation: heartBeat 2s infinite;
+    }
+
+    #rolet {
+      font-size: 5em;
+      color: #ff69b4;
+      margin: 50px 0;
+      transition: transform 0.3s ease;
+    }
+
+    button {
+      font-size: 1.5em;
+      padding: 15px 30px;
+      background-color: #ff4d6d;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff1c52;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Aku Punya Pertanyaan, Kamu pasti suka sama aku kan?</h1>
+  <div id="rolet">?</div>
+  <button onclick="tembak()">Putar Rolet</button>
+
+  <script>
+    function tembak() {
+      const rolet = document.getElementById("rolet");
+      rolet.innerHTML = "IYAAA!!!";
+      rolet.style.transform = "rotate(360deg)";
+      setTimeout(() => {
+        alert("Hihi... jadi kamu mau ya? Aku suka kamu juga!");
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
